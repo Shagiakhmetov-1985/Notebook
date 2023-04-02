@@ -13,11 +13,13 @@
 		C3554C3029D77600000D28A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3554C2F29D77600000D28A8 /* Preview Assets.xcassets */; };
 		C3554C3729D780AF000D28A8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3554C3629D780AF000D28A8 /* CustomCell.swift */; };
 		C3554C3929D78612000D28A8 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3554C3829D78612000D28A8 /* Notebook.swift */; };
-		C37D523129D7BDED00657FDF /* EmptyNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523029D7BDED00657FDF /* EmptyNote.swift */; };
 		C37D523429D7BEAD00657FDF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523329D7BEAD00657FDF /* CustomTextField.swift */; };
 		C37D523629D8335300657FDF /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523529D8335300657FDF /* CustomLabel.swift */; };
 		C37D523829D8346C00657FDF /* CustomViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523729D8346C00657FDF /* CustomViewText.swift */; };
-		C37D523D29D847F000657FDF /* AddNewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523C29D847F000657FDF /* AddNewNote.swift */; };
+		C37D523D29D847F000657FDF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523C29D847F000657FDF /* Note.swift */; };
+		C38F356929D9721C004AFE9F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356829D9721C004AFE9F /* StorageManager.swift */; };
+		C38F356D29DA0369004AFE9F /* EmptyNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356C29DA0369004AFE9F /* EmptyNote.swift */; };
+		C38F357029DA042A004AFE9F /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356F29DA042A004AFE9F /* NoteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +30,13 @@
 		C3554C2F29D77600000D28A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C3554C3629D780AF000D28A8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C3554C3829D78612000D28A8 /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
-		C37D523029D7BDED00657FDF /* EmptyNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNote.swift; sourceTree = "<group>"; };
 		C37D523329D7BEAD00657FDF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C37D523529D8335300657FDF /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		C37D523729D8346C00657FDF /* CustomViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewText.swift; sourceTree = "<group>"; };
-		C37D523C29D847F000657FDF /* AddNewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNote.swift; sourceTree = "<group>"; };
+		C37D523C29D847F000657FDF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		C38F356829D9721C004AFE9F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		C38F356C29DA0369004AFE9F /* EmptyNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNote.swift; sourceTree = "<group>"; };
+		C38F356F29DA042A004AFE9F /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				C3554C2829D775FF000D28A8 /* NotebookApp.swift */,
-				C3554C2A29D775FF000D28A8 /* MainView.swift */,
-				C37D523C29D847F000657FDF /* AddNewNote.swift */,
-				C37D523229D7BDF500657FDF /* Modifiers */,
+				C38F356A29D97227004AFE9F /* Services */,
 				C37D522F29D7BBE600657FDF /* Models */,
+				C38F356E29DA03DB004AFE9F /* ViewModels */,
+				C38F356B29D97267004AFE9F /* Views */,
 				C37D523B29D844FD00657FDF /* Resources */,
 				C3554C2E29D77600000D28A8 /* Preview Content */,
 			);
@@ -92,24 +96,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C37D523229D7BDF500657FDF /* Modifiers */ = {
+		C37D523929D843CC00657FDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C37D523029D7BDED00657FDF /* EmptyNote.swift */,
+				C38F356C29DA0369004AFE9F /* EmptyNote.swift */,
 				C3554C3629D780AF000D28A8 /* CustomCell.swift */,
-				C37D523929D843CC00657FDF /* UIViews */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		C37D523929D843CC00657FDF /* UIViews */ = {
-			isa = PBXGroup;
-			children = (
 				C37D523329D7BEAD00657FDF /* CustomTextField.swift */,
 				C37D523529D8335300657FDF /* CustomLabel.swift */,
 				C37D523729D8346C00657FDF /* CustomViewText.swift */,
 			);
-			path = UIViews;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C37D523B29D844FD00657FDF /* Resources */ = {
@@ -118,6 +114,32 @@
 				C3554C2C29D77600000D28A8 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C38F356A29D97227004AFE9F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C38F356829D9721C004AFE9F /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C38F356B29D97267004AFE9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3554C2A29D775FF000D28A8 /* MainView.swift */,
+				C37D523C29D847F000657FDF /* Note.swift */,
+				C37D523929D843CC00657FDF /* Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C38F356E29DA03DB004AFE9F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C38F356F29DA042A004AFE9F /* NoteViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,13 +214,15 @@
 			files = (
 				C3554C2B29D775FF000D28A8 /* MainView.swift in Sources */,
 				C3554C3929D78612000D28A8 /* Notebook.swift in Sources */,
+				C38F357029DA042A004AFE9F /* NoteViewModel.swift in Sources */,
 				C37D523829D8346C00657FDF /* CustomViewText.swift in Sources */,
-				C37D523D29D847F000657FDF /* AddNewNote.swift in Sources */,
+				C37D523D29D847F000657FDF /* Note.swift in Sources */,
 				C3554C3729D780AF000D28A8 /* CustomCell.swift in Sources */,
 				C37D523629D8335300657FDF /* CustomLabel.swift in Sources */,
 				C37D523429D7BEAD00657FDF /* CustomTextField.swift in Sources */,
+				C38F356929D9721C004AFE9F /* StorageManager.swift in Sources */,
 				C3554C2929D775FF000D28A8 /* NotebookApp.swift in Sources */,
-				C37D523129D7BDED00657FDF /* EmptyNote.swift in Sources */,
+				C38F356D29DA0369004AFE9F /* EmptyNote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

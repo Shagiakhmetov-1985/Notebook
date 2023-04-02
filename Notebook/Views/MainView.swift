@@ -8,40 +8,42 @@
 import SwiftUI
 
 struct MainView: View {
-    private let notes = [
-        Notebook(theme: "My first note", date: "31.03.2023", text: ""),
-        Notebook(theme: "My favorite movie", date: "1.04.2023", text: "")
-    ]
+    @EnvironmentObject var noteViewModel: NoteViewModel
     
     var body: some View {
         NavigationView {
-            List(notes, id: \.theme) { note in
-                CustomCell(text: note.theme, date: note.date)
+            List {
+                ForEach(noteViewModel.notes) { note in
+                    NavigationLink {
+                        Note(theme: note.theme, description: note.text)
+                    } label: {
+                        CustomCell(theme: note.theme, date: note.date)
+                    }
+                }
+                .onDelete(perform: noteViewModel.deleteNote)
             }
             .navigationTitle("Notebook")
+            .listStyle(.sidebar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        AddNewNote(theme: "", description: "")
+                        Note(theme: "", description: "")
                     } label: {
                         Image(systemName: "square.and.pencil")
-                            .foregroundColor(Color(
-                                red: 220/255,
-                                green: 190/255,
-                                blue: 30/255))
                     }
-
                 }
                 ToolbarItem(placement: .bottomBar) {
-                    Text("Total notes: \(notes.count)")
+                    Text("\(noteViewModel.notes.count) notes")
                 }
             }
         }
+        .tint(Color(red: 220/255, green: 190/255, blue: 30/255))
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(NoteViewModel())
     }
 }

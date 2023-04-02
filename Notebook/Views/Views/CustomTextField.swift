@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct CustomTextField: View {
     @Binding var text: String
@@ -21,6 +22,15 @@ struct CustomTextField: View {
             )
             .cornerRadius(6)
             .padding(3)
+            .onReceive(Just(text)) { _ in limitText(18) }
+    }
+}
+
+extension CustomTextField {
+    private func limitText(_ limit: Int) {
+        if text.count > limit {
+            text = String(text.prefix(limit))
+        }
     }
 }
 

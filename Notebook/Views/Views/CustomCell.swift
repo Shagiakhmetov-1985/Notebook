@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CustomCell: View {
-    let text: String
+    let theme: String
     let date: String
     
     var body: some View {
         VStack {
             HStack {
-                Text(text)
+                Text(theme)
                 Spacer()
             }
             HStack {
@@ -28,6 +28,6 @@ struct CustomCell: View {
 
 struct CustomCell_Previews: PreviewProvider {
     static var previews: some View {
-        CustomCell(text: "Theme", date: "31.03.2023")
+        CustomCell(theme: "Theme", date: "31.03.2023")
     }
 }

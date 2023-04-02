@@ -2,7 +2,7 @@
 //  EmptyNote.swift
 //  Notebook
 //
-//  Created by Marat Shagiakhmetov on 01.04.2023.
+//  Created by Marat Shagiakhmetov on 02.04.2023.
 //
 
 import SwiftUI

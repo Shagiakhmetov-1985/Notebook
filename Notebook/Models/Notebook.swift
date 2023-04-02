@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Notebook {
+struct Notebook: Identifiable {
+    let id: String = UUID().uuidString
     let theme: String
     let date: String
     let text: String

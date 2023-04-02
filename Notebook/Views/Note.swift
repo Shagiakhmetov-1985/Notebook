@@ -7,20 +7,17 @@
 
 import SwiftUI
 
-struct AddNewNote: View {
+struct Note: View {
     @State var theme: String
     @State var description: String
     
     var body: some View {
-        NavigationView {
-            EmptyNote(themeText: $theme, descriptionText: $description)
-        }
-        .navigationTitle("New note")
+        EmptyNote(themeText: $theme, descriptionText: $description)
     }
 }
 
 struct AddNewNote_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewNote(theme: "", description: "")
+        Note(theme: "", description: "")
     }
 }
