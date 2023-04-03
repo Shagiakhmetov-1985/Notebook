@@ -1,5 +1,5 @@
 //
-//  EmptyNote.swift
+//  Note.swift
 //  Notebook
 //
 //  Created by Marat Shagiakhmetov on 02.04.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyNote: View {
+struct Note: View {
     @State var theme = "Theme"
     @State var description = "Description"
     
@@ -28,7 +28,7 @@ struct EmptyNote: View {
 
 struct EmptyNote_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyNote(themeText: .constant(""),
+        Note(themeText: .constant(""),
                   descriptionText: .constant(""))
     }
 }

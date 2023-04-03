@@ -16,10 +16,11 @@
 		C37D523429D7BEAD00657FDF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523329D7BEAD00657FDF /* CustomTextField.swift */; };
 		C37D523629D8335300657FDF /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523529D8335300657FDF /* CustomLabel.swift */; };
 		C37D523829D8346C00657FDF /* CustomViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523729D8346C00657FDF /* CustomViewText.swift */; };
-		C37D523D29D847F000657FDF /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523C29D847F000657FDF /* Note.swift */; };
+		C37D523D29D847F000657FDF /* AddNewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523C29D847F000657FDF /* AddNewNote.swift */; };
 		C38F356929D9721C004AFE9F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356829D9721C004AFE9F /* StorageManager.swift */; };
-		C38F356D29DA0369004AFE9F /* EmptyNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356C29DA0369004AFE9F /* EmptyNote.swift */; };
+		C38F356D29DA0369004AFE9F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356C29DA0369004AFE9F /* Note.swift */; };
 		C38F357029DA042A004AFE9F /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356F29DA042A004AFE9F /* NoteViewModel.swift */; };
+		C38F357229DAA53B004AFE9F /* EditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F357129DAA53B004AFE9F /* EditNote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +34,11 @@
 		C37D523329D7BEAD00657FDF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C37D523529D8335300657FDF /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		C37D523729D8346C00657FDF /* CustomViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewText.swift; sourceTree = "<group>"; };
-		C37D523C29D847F000657FDF /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		C37D523C29D847F000657FDF /* AddNewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNote.swift; sourceTree = "<group>"; };
 		C38F356829D9721C004AFE9F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		C38F356C29DA0369004AFE9F /* EmptyNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyNote.swift; sourceTree = "<group>"; };
+		C38F356C29DA0369004AFE9F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C38F356F29DA042A004AFE9F /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		C38F357129DAA53B004AFE9F /* EditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,7 @@
 		C37D523929D843CC00657FDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C38F356C29DA0369004AFE9F /* EmptyNote.swift */,
+				C38F356C29DA0369004AFE9F /* Note.swift */,
 				C3554C3629D780AF000D28A8 /* CustomCell.swift */,
 				C37D523329D7BEAD00657FDF /* CustomTextField.swift */,
 				C37D523529D8335300657FDF /* CustomLabel.swift */,
@@ -128,7 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				C3554C2A29D775FF000D28A8 /* MainView.swift */,
-				C37D523C29D847F000657FDF /* Note.swift */,
+				C37D523C29D847F000657FDF /* AddNewNote.swift */,
+				C38F357129DAA53B004AFE9F /* EditNote.swift */,
 				C37D523929D843CC00657FDF /* Views */,
 			);
 			path = Views;
@@ -216,13 +219,14 @@
 				C3554C3929D78612000D28A8 /* Notebook.swift in Sources */,
 				C38F357029DA042A004AFE9F /* NoteViewModel.swift in Sources */,
 				C37D523829D8346C00657FDF /* CustomViewText.swift in Sources */,
-				C37D523D29D847F000657FDF /* Note.swift in Sources */,
+				C37D523D29D847F000657FDF /* AddNewNote.swift in Sources */,
 				C3554C3729D780AF000D28A8 /* CustomCell.swift in Sources */,
 				C37D523629D8335300657FDF /* CustomLabel.swift in Sources */,
 				C37D523429D7BEAD00657FDF /* CustomTextField.swift in Sources */,
 				C38F356929D9721C004AFE9F /* StorageManager.swift in Sources */,
+				C38F357229DAA53B004AFE9F /* EditNote.swift in Sources */,
 				C3554C2929D775FF000D28A8 /* NotebookApp.swift in Sources */,
-				C38F356D29DA0369004AFE9F /* EmptyNote.swift in Sources */,
+				C38F356D29DA0369004AFE9F /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

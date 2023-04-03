@@ -9,13 +9,14 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject var noteViewModel: NoteViewModel
+    @State var isPush = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(noteViewModel.notes) { note in
                     NavigationLink {
-                        Note(theme: note.theme, description: note.text)
+                        EditNote(theme: note.theme, text: note.text)
                     } label: {
                         CustomCell(theme: note.theme, date: note.date)
                     }
@@ -27,7 +28,7 @@ struct MainView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {
-                        Note(theme: "", description: "")
+                        AddNewNote(theme: "", description: "")
                     } label: {
                         Image(systemName: "square.and.pencil")
                     }

@@ -31,4 +31,10 @@ class NoteViewModel: ObservableObject {
         let newNote = Notebook(theme: "", date: "", text: "")
         notes.append(newNote)
     }
+    
+    func updateNote(note: Notebook) {
+        if let index = notes.firstIndex(where: { $0.id == note.id }) {
+            notes[index] = note.updateNote()
+        }
+    }
 }
