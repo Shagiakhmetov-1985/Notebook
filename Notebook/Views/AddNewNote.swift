@@ -14,10 +14,29 @@ struct AddNewNote: View {
     @State var description: String
     
     var body: some View {
-        Note(themeText: $theme, descriptionText: $description)
-            .onAppear {
-                noteViewModel.addNote()
+        ZStack {
+            VStack {
+                Note(themeText: $theme.onChange(textChanges),
+                     descriptionText: $description)
+                    .onAppear {
+                        noteViewModel.addNote()
+                    }
             }
+        }
+        .navigationTitle("New note")
+        .navigationBarTitleDisplayMode(.inline)
+        .padding()
+        .ignoresSafeArea(.keyboard)
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+        }
+    }
+}
+
+extension AddNewNote {
+    private func textChanges(to value: String) {
+        var note = noteViewModel.fetchAddNote()
+        
     }
 }
 

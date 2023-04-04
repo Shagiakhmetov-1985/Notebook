@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct CustomLabel: View {
+    @State var alignment: Alignment
+    @State var width: CGFloat? = nil
+    
     @Binding var text: String
     
-    let width: CGFloat = 350
-    
     var body: some View {
-        HStack {
-            Text(text)
-                .frame(width: width, alignment: .leading)
-        }
-        .padding(3)
+        Text(text)
+            .frame(width: width, alignment: alignment)
     }
 }
 
 struct CustomLabel_Previews: PreviewProvider {
     static var previews: some View {
-        CustomLabel(text: .constant("Some text"))
+        CustomLabel(alignment: .leading,
+                    width: 350,
+                    text: .constant("Some text"))
     }
 }

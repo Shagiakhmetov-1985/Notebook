@@ -11,15 +11,13 @@ struct CustomViewText: View {
     @Binding var text: String
     
     let width: CGFloat = 350
-    let height: CGFloat = 500
     
     var body: some View {
         TextEditor(text: $text)
-            .frame(width: width, height: height)
+            .frame(width: width)
             .overlay(RoundedRectangle(cornerRadius: 6)
                 .stroke(lineWidth: 1)
             )
-            .padding(3)
     }
 }
 

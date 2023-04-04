@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct CustomCell: View {
-    let theme: String
-    let date: String
+    @State var theme: String
+    @State var date: String
     
     var body: some View {
         VStack {
             HStack {
-                Text(theme)
+                CustomLabel(alignment: .leading, text: $theme)
                 Spacer()
             }
             HStack {
-                Text(date)
+                CustomLabel(alignment: .leading, text: $date)
                     .opacity(0.4)
                 Spacer()
             }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3404BB329DC992000600635 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3404BB229DC992000600635 /* UIApplication.swift */; };
+		C3404BB629DCB94B00600635 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3404BB529DCB94B00600635 /* Binding.swift */; };
+		C3404BB829DCC05000600635 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3404BB729DCC05000600635 /* Array.swift */; };
 		C3554C2929D775FF000D28A8 /* NotebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3554C2829D775FF000D28A8 /* NotebookApp.swift */; };
 		C3554C2B29D775FF000D28A8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3554C2A29D775FF000D28A8 /* MainView.swift */; };
 		C3554C2D29D77600000D28A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3554C2C29D77600000D28A8 /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3404BB229DC992000600635 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		C3404BB529DCB94B00600635 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		C3404BB729DCC05000600635 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		C3554C2529D775FF000D28A8 /* Notebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3554C2829D775FF000D28A8 /* NotebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookApp.swift; sourceTree = "<group>"; };
 		C3554C2A29D775FF000D28A8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -52,6 +58,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3404BB429DC994000600635 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C3404BB229DC992000600635 /* UIApplication.swift */,
+				C3404BB529DCB94B00600635 /* Binding.swift */,
+				C3404BB729DCC05000600635 /* Array.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C3554C1C29D775FF000D28A8 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				C3554C2829D775FF000D28A8 /* NotebookApp.swift */,
+				C3404BB429DC994000600635 /* Extensions */,
 				C38F356A29D97227004AFE9F /* Services */,
 				C37D522F29D7BBE600657FDF /* Models */,
 				C38F356E29DA03DB004AFE9F /* ViewModels */,
@@ -218,14 +235,17 @@
 				C3554C2B29D775FF000D28A8 /* MainView.swift in Sources */,
 				C3554C3929D78612000D28A8 /* Notebook.swift in Sources */,
 				C38F357029DA042A004AFE9F /* NoteViewModel.swift in Sources */,
+				C3404BB629DCB94B00600635 /* Binding.swift in Sources */,
 				C37D523829D8346C00657FDF /* CustomViewText.swift in Sources */,
 				C37D523D29D847F000657FDF /* AddNewNote.swift in Sources */,
+				C3404BB829DCC05000600635 /* Array.swift in Sources */,
 				C3554C3729D780AF000D28A8 /* CustomCell.swift in Sources */,
 				C37D523629D8335300657FDF /* CustomLabel.swift in Sources */,
 				C37D523429D7BEAD00657FDF /* CustomTextField.swift in Sources */,
 				C38F356929D9721C004AFE9F /* StorageManager.swift in Sources */,
 				C38F357229DAA53B004AFE9F /* EditNote.swift in Sources */,
 				C3554C2929D775FF000D28A8 /* NotebookApp.swift in Sources */,
+				C3404BB329DC992000600635 /* UIApplication.swift in Sources */,
 				C38F356D29DA0369004AFE9F /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

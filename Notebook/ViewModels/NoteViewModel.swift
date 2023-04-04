@@ -37,4 +37,8 @@ class NoteViewModel: ObservableObject {
             notes[index] = note.updateNote()
         }
     }
+    
+    func fetchAddNote() -> Notebook {
+        notes.lastNote
+    }
 }

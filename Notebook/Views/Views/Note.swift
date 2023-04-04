@@ -8,20 +8,37 @@
 import SwiftUI
 
 struct Note: View {
+    enum Field {
+        case theme
+        case text
+    }
+    
     @State var theme = "Theme"
     @State var description = "Description"
     
     @Binding var themeText: String
     @Binding var descriptionText: String
     
+    @FocusState var focusedField: Field?
+    
     var body: some View {
         VStack {
-            CustomLabel(text: $theme)
+            CustomLabel(alignment: .leading, width: 350, text: $theme)
             CustomTextField(text: $themeText)
-            CustomLabel(text: $description)
+                .focused($focusedField, equals: .theme)
+                .submitLabel(.next)
+            CustomLabel(alignment: .leading, width: 350, text: $description)
             CustomViewText(text: $descriptionText)
-            
-            Spacer()
+                .focused($focusedField, equals: .text)
+                .submitLabel(.return)
+        }
+        .onSubmit {
+            switch focusedField {
+            case .theme:
+                focusedField = .text
+            default:
+                break
+            }
         }
     }
 }
