@@ -32,13 +32,14 @@ class NoteViewModel: ObservableObject {
         notes.append(newNote)
     }
     
-    func updateNote(note: Notebook) {
+    func updateNote(note: Notebook, theme: String, date: String, text: String) {
         if let index = notes.firstIndex(where: { $0.id == note.id }) {
-            notes[index] = note.updateNote()
+            notes[index] = note.updateNote(theme: theme, date: date, text: text)
         }
     }
     
-    func fetchAddNote() -> Notebook {
-        notes.lastNote
+    func updateAddNote(theme: String, date: String, text: String) {
+        let index = notes.count - 1
+        notes[index] = notes[index].updateNote(theme: theme, date: date, text: text)
     }
 }

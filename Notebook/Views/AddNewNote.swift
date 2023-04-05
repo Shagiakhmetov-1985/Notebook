@@ -11,13 +11,14 @@ struct AddNewNote: View {
     @EnvironmentObject var noteViewModel: NoteViewModel
     
     @State var theme: String
+    @State var date: String
     @State var description: String
     
     var body: some View {
         ZStack {
             VStack {
                 Note(themeText: $theme.onChange(textChanges),
-                     descriptionText: $description)
+                     descriptionText: $description.onChange(textChanges))
                     .onAppear {
                         noteViewModel.addNote()
                     }
@@ -35,14 +36,19 @@ struct AddNewNote: View {
 
 extension AddNewNote {
     private func textChanges(to value: String) {
-        var note = noteViewModel.fetchAddNote()
+        let currentDate = Date()
+        let formatter = DateFormatter()
         
+        formatter.dateFormat = "dd.MM.YYYY в HH:mm"
+        date = formatter.string(from: currentDate)
+        
+        noteViewModel.updateAddNote(theme: theme, date: date, text: description)
     }
 }
 
 struct AddNewNote_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewNote(theme: "", description: "")
+        AddNewNote(theme: "", date: "", description: "")
             .environmentObject(NoteViewModel())
     }
 }

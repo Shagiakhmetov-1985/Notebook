@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CustomCell: View {
-    @State var theme: String
-    @State var date: String
+    @Binding var theme: String
+    @Binding var date: String
     
     var body: some View {
         VStack {
@@ -28,6 +28,6 @@ struct CustomCell: View {
 
 struct CustomCell_Previews: PreviewProvider {
     static var previews: some View {
-        CustomCell(theme: "Theme", date: "31.03.2023")
+        CustomCell(theme: .constant("Theme"), date: .constant("31.03.2023"))
     }
 }

@@ -9,9 +9,9 @@ import Foundation
 
 struct Notebook: Identifiable {
     let id: String
-    let theme: String
-    let date: String
-    let text: String
+    var theme: String
+    var date: String
+    var text: String
     
     init(id: String = UUID().uuidString, theme: String, date: String, text: String) {
         self.id = id
@@ -20,7 +20,7 @@ struct Notebook: Identifiable {
         self.text = text
     }
     
-    func updateNote() -> Notebook {
+    func updateNote(theme: String, date: String, text: String) -> Notebook {
         return Notebook(id: id, theme: theme, date: date, text: text)
     }
 }
