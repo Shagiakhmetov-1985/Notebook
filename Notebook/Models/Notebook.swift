@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Notebook: Identifiable {
+struct Notebook: Identifiable, Codable {
     let id: String
     var theme: String
     var date: String

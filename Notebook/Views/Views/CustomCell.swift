@@ -14,11 +14,11 @@ struct CustomCell: View {
     var body: some View {
         VStack {
             HStack {
-                CustomLabel(alignment: .leading, text: $theme)
+                CustomLabel(text: $theme)
                 Spacer()
             }
             HStack {
-                CustomLabel(alignment: .leading, text: $date)
+                CustomLabel(text: $date)
                     .opacity(0.4)
                 Spacer()
             }

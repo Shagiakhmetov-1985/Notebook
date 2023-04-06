@@ -12,18 +12,25 @@ struct MainView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach($noteViewModel.notes) { $note in
-                    NavigationLink {
-                        EditNote(theme: note.theme, text: note.text)
-                    } label: {
-                        CustomCell(theme: $note.theme, date: $note.date)
+            ZStack {
+                if noteViewModel.notes.isEmpty {
+                    NoNotesView()
+                        .transition(AnyTransition.opacity.animation(.easeIn))
+                } else {
+                    List {
+                        ForEach($noteViewModel.notes) { $note in
+                            NavigationLink {
+                                EditNote(note: note, theme: note.theme, text: note.text)
+                            } label: {
+                                CustomCell(theme: $note.theme, date: $note.date)
+                            }
+                        }
+                        .onDelete(perform: noteViewModel.deleteNote)
                     }
+                    .listStyle(.sidebar)
                 }
-                .onDelete(perform: noteViewModel.deleteNote)
             }
             .navigationTitle("Notebook")
-            .listStyle(.sidebar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink {

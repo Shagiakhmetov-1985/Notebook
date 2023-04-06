@@ -10,11 +10,8 @@ import SwiftUI
 struct CustomViewText: View {
     @Binding var text: String
     
-    let width: CGFloat = 350
-    
     var body: some View {
         TextEditor(text: $text)
-            .frame(width: width)
             .overlay(RoundedRectangle(cornerRadius: 6)
                 .stroke(lineWidth: 1)
             )

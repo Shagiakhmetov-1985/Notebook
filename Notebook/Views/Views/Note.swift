@@ -22,12 +22,12 @@ struct Note: View {
     @FocusState var focusedField: Field?
     
     var body: some View {
-        VStack {
-            CustomLabel(alignment: .leading, width: 350, text: $theme)
+        VStack(alignment: .leading) {
+            CustomLabel(text: $theme)
             CustomTextField(text: $themeText)
                 .focused($focusedField, equals: .theme)
                 .submitLabel(.next)
-            CustomLabel(alignment: .leading, width: 350, text: $description)
+            CustomLabel(text: $description)
             CustomViewText(text: $descriptionText)
                 .focused($focusedField, equals: .text)
                 .submitLabel(.return)

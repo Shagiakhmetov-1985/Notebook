@@ -16,13 +16,14 @@
 		C3554C3729D780AF000D28A8 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3554C3629D780AF000D28A8 /* CustomCell.swift */; };
 		C3554C3929D78612000D28A8 /* Notebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3554C3829D78612000D28A8 /* Notebook.swift */; };
 		C37D523429D7BEAD00657FDF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523329D7BEAD00657FDF /* CustomTextField.swift */; };
-		C37D523629D8335300657FDF /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523529D8335300657FDF /* CustomLabel.swift */; };
 		C37D523829D8346C00657FDF /* CustomViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523729D8346C00657FDF /* CustomViewText.swift */; };
 		C37D523D29D847F000657FDF /* AddNewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37D523C29D847F000657FDF /* AddNewNote.swift */; };
-		C38F356929D9721C004AFE9F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356829D9721C004AFE9F /* StorageManager.swift */; };
 		C38F356D29DA0369004AFE9F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356C29DA0369004AFE9F /* Note.swift */; };
 		C38F357029DA042A004AFE9F /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F356F29DA042A004AFE9F /* NoteViewModel.swift */; };
 		C38F357229DAA53B004AFE9F /* EditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38F357129DAA53B004AFE9F /* EditNote.swift */; };
+		C3B4F87629DEA9C400BDB91B /* NoNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4F87529DEA9C400BDB91B /* NoNotesView.swift */; };
+		C3B4F87829DEE01000BDB91B /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4F87729DEE01000BDB91B /* CustomLabel.swift */; };
+		C3B4F87A29DEE3B400BDB91B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B4F87929DEE3B400BDB91B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +37,14 @@
 		C3554C3629D780AF000D28A8 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		C3554C3829D78612000D28A8 /* Notebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notebook.swift; sourceTree = "<group>"; };
 		C37D523329D7BEAD00657FDF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		C37D523529D8335300657FDF /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		C37D523729D8346C00657FDF /* CustomViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewText.swift; sourceTree = "<group>"; };
 		C37D523C29D847F000657FDF /* AddNewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNote.swift; sourceTree = "<group>"; };
-		C38F356829D9721C004AFE9F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		C38F356C29DA0369004AFE9F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C38F356F29DA042A004AFE9F /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		C38F357129DAA53B004AFE9F /* EditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNote.swift; sourceTree = "<group>"; };
+		C3B4F87529DEA9C400BDB91B /* NoNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNotesView.swift; sourceTree = "<group>"; };
+		C3B4F87729DEE01000BDB91B /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		C3B4F87929DEE3B400BDB91B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,6 @@
 			children = (
 				C3554C2829D775FF000D28A8 /* NotebookApp.swift */,
 				C3404BB429DC994000600635 /* Extensions */,
-				C38F356A29D97227004AFE9F /* Services */,
 				C37D522F29D7BBE600657FDF /* Models */,
 				C38F356E29DA03DB004AFE9F /* ViewModels */,
 				C38F356B29D97267004AFE9F /* Views */,
@@ -118,7 +119,7 @@
 				C38F356C29DA0369004AFE9F /* Note.swift */,
 				C3554C3629D780AF000D28A8 /* CustomCell.swift */,
 				C37D523329D7BEAD00657FDF /* CustomTextField.swift */,
-				C37D523529D8335300657FDF /* CustomLabel.swift */,
+				C3B4F87729DEE01000BDB91B /* CustomLabel.swift */,
 				C37D523729D8346C00657FDF /* CustomViewText.swift */,
 			);
 			path = Views;
@@ -132,20 +133,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C38F356A29D97227004AFE9F /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				C38F356829D9721C004AFE9F /* StorageManager.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		C38F356B29D97267004AFE9F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				C3554C2A29D775FF000D28A8 /* MainView.swift */,
 				C37D523C29D847F000657FDF /* AddNewNote.swift */,
 				C38F357129DAA53B004AFE9F /* EditNote.swift */,
+				C3B4F87529DEA9C400BDB91B /* NoNotesView.swift */,
+				C3B4F87929DEE3B400BDB91B /* Launch Screen.storyboard */,
 				C37D523929D843CC00657FDF /* Views */,
 			);
 			path = Views;
@@ -217,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B4F87A29DEE3B400BDB91B /* Launch Screen.storyboard in Resources */,
 				C3554C3029D77600000D28A8 /* Preview Assets.xcassets in Resources */,
 				C3554C2D29D77600000D28A8 /* Assets.xcassets in Resources */,
 			);
@@ -232,13 +228,13 @@
 				C3554C2B29D775FF000D28A8 /* MainView.swift in Sources */,
 				C3554C3929D78612000D28A8 /* Notebook.swift in Sources */,
 				C38F357029DA042A004AFE9F /* NoteViewModel.swift in Sources */,
+				C3B4F87829DEE01000BDB91B /* CustomLabel.swift in Sources */,
 				C3404BB629DCB94B00600635 /* Binding.swift in Sources */,
 				C37D523829D8346C00657FDF /* CustomViewText.swift in Sources */,
+				C3B4F87629DEA9C400BDB91B /* NoNotesView.swift in Sources */,
 				C37D523D29D847F000657FDF /* AddNewNote.swift in Sources */,
 				C3554C3729D780AF000D28A8 /* CustomCell.swift in Sources */,
-				C37D523629D8335300657FDF /* CustomLabel.swift in Sources */,
 				C37D523429D7BEAD00657FDF /* CustomTextField.swift in Sources */,
-				C38F356929D9721C004AFE9F /* StorageManager.swift in Sources */,
 				C38F357229DAA53B004AFE9F /* EditNote.swift in Sources */,
 				C3554C2929D775FF000D28A8 /* NotebookApp.swift in Sources */,
 				C3404BB329DC992000600635 /* UIApplication.swift in Sources */,
@@ -373,9 +369,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Notebook/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Notebook;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -401,9 +399,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Notebook/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Notebook;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

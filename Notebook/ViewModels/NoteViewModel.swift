@@ -8,19 +8,25 @@
 import Foundation
 
 class NoteViewModel: ObservableObject {
-    @Published var notes: [Notebook] = []
+    @Published var notes: [Notebook] = [] {
+        didSet {
+            saveNotes()
+        }
+    }
+    
+    let notesKey = "notes"
     
     init() {
         getNotes()
     }
     
     func getNotes() {
-        let newNotes = [
-            Notebook(theme: "My first note", date: "31.03.2023", text: "afasdf"),
-            Notebook(theme: "My second note", date: "1.04.2023", text: "fijgijjg"),
-            Notebook(theme: "Third note", date: "2.04.2023", text: "ahahaha")
-        ]
-        notes.append(contentsOf: newNotes)
+        guard
+            let data = UserDefaults.standard.data(forKey: notesKey),
+            let savedNotes = try? JSONDecoder().decode([Notebook].self, from: data)
+        else { return }
+        
+        notes = savedNotes
     }
     
     func deleteNote(indexSet: IndexSet) {
@@ -41,5 +47,10 @@ class NoteViewModel: ObservableObject {
     func updateAddNote(theme: String, date: String, text: String) {
         let index = notes.count - 1
         notes[index] = notes[index].updateNote(theme: theme, date: date, text: text)
+    }
+    
+    func saveNotes() {
+        guard let encodedData = try? JSONEncoder().encode(notes) else { return }
+        UserDefaults.standard.set(encodedData, forKey: notesKey)
     }
 }

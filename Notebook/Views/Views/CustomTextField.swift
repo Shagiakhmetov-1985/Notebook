@@ -13,13 +13,10 @@ struct CustomTextField: View {
     
     @Binding var text: String
     
-    let width: CGFloat = 350
-    
     var body: some View {
         HStack {
             TextField("Type your topic", text: $text)
                 .textFieldStyle(.roundedBorder)
-                .frame(width: width)
                 .overlay(RoundedRectangle(cornerRadius: 6)
                     .stroke(lineWidth: 2)
                 )
